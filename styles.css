@@ -221,7 +221,7 @@ a {
 }
 
 .hero__title {
-  font-size: clamp(4rem, 14vw, 9rem);
+  font-size: clamp(2.5rem, 10vw, 7rem);
   font-weight: 900;
   margin: 0;
   color: #fff;
