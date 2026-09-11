@@ -3,7 +3,7 @@ renderPostList(document.getElementById("posts-list"));
 
 const lines = [
   "whoami",
-  "> nova — creative developer",
+  "> serendipity — enthusiast & maker",
   "cat interests.txt",
   "> react · css · motion · webgl",
   "npm run ideas",
