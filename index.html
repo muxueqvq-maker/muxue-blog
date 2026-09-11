@@ -155,8 +155,26 @@
     </div>
   </footer>
 
+  <div class="music-player" aria-label="Music player">
+    <button class="mp-skip" id="mp-prev" type="button" aria-label="Previous">⏮</button>
+    <button class="mp-play" id="mp-play" type="button" aria-label="Play or pause">▶</button>
+    <button class="mp-skip" id="mp-next" type="button" aria-label="Next">⏭</button>
+    <div class="mp-eq" id="mp-eq" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="mp-info">
+      <span class="mp-title" id="mp-title">—</span>
+      <span class="mp-artist" id="mp-artist">—</span>
+    </div>
+    <div class="mp-progress" id="mp-progress"><div class="mp-progress__fill" id="mp-progress-fill"></div></div>
+    <div class="mp-time"><span id="mp-cur">0:00</span> / <span id="mp-dur">0:00</span></div>
+    <div class="mp-volume">
+      <span class="mp-vol-icon">♪</span>
+      <input type="range" id="mp-vol" min="0" max="1" step="0.01" value="0.8" />
+    </div>
+  </div>
+
   <script src="posts-data.js"></script>
   <script src="posts.js"></script>
   <script src="script.js"></script>
+  <script src="music-player.js"></script>
 </body>
 </html>
