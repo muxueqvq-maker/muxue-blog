@@ -375,7 +375,7 @@ function renderPost(container, slug) {
   const post = getAllPosts().find((p) => p.slug === slug);
 
   if (!post) {
-    document.title = "404 // SIGNAL LOST — NOVA";
+    document.title = "404 // SIGNAL LOST — SERENDIPITY";
     container.innerHTML = `
       <div class="post-notfound">
         <h1>404 // SIGNAL LOST</h1>
@@ -385,7 +385,7 @@ function renderPost(container, slug) {
     return;
   }
 
-  document.title = post.title + " — NOVA";
+  document.title = post.title + " — Serendipity";
   container.innerHTML = `
     <a class="back-link" href="index.html">← BACK TO INDEX</a>
     <div class="post-head">
