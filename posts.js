@@ -338,7 +338,8 @@ function readLocalPosts() {
 }
 
 function getAllPosts() {
-  return [...POSTS, ...readLocalPosts()].sort((a, b) => b.date.localeCompare(a.date));
+  const published = Array.isArray(window.ALL_POSTS) ? window.ALL_POSTS : [];
+  return [...POSTS, ...published, ...readLocalPosts()].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 function saveLocalPost(post) {

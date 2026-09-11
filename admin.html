@@ -63,11 +63,30 @@
       </label>
 
       <div class="writer__actions">
-        <button class="btn btn--primary" type="submit">SAVE LOCALLY</button>
+        <button class="btn btn--primary" type="button" id="publish-btn">PUBLISH TO GITHUB</button>
+        <button class="btn btn--ghost" type="submit">SAVE LOCALLY</button>
         <button class="btn btn--ghost" type="button" id="preview-btn">TOGGLE PREVIEW</button>
       </div>
       <p class="writer__note" id="writer-note" aria-live="polite"></p>
     </form>
+
+    <details class="gh-settings">
+      <summary>GITHUB PUBLISH SETTINGS</summary>
+      <div class="gh-settings__grid">
+        <label>
+          <span>OWNER</span>
+          <input id="gh-owner" type="text" placeholder="muxueqvq-maker" autocomplete="off" />
+        </label>
+        <label>
+          <span>REPO</span>
+          <input id="gh-repo" type="text" placeholder="muxue-blog" autocomplete="off" />
+        </label>
+        <label class="gh-settings__wide">
+          <span>TOKEN (only stored in this browser)</span>
+          <input id="gh-token" type="password" placeholder="github_pat_..." autocomplete="off" />
+        </label>
+      </div>
+    </details>
 
     <div class="preview" id="preview" hidden>
       <article class="article"></article>
@@ -89,6 +108,7 @@
     </div>
   </footer>
 
+  <script src="posts-data.js"></script>
   <script src="posts.js"></script>
   <script src="admin.js"></script>
 </body>
