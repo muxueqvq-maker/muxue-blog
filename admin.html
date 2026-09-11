@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Write — NOVA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--cyan" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--magenta" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html" data-text="NOVA//">NOVA//</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#guides">GUIDES</a>
+      <a href="index.html#blog">BLOG</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="admin.html">WRITE</a>
+    </nav>
+    <a class="btn btn--ghost nav-cta" href="index.html">BACK</a>
+  </header>
+
+  <main class="admin-page">
+    <p class="hero__kicker">// NEW TRANSMISSION</p>
+    <h1 class="admin-title glitch" data-text="WRITE">WRITE</h1>
+    <p class="admin-intro">
+      Draft an article below. It will be saved to this browser and appear on the site.
+      Markdown is supported.
+    </p>
+
+    <form id="writer" class="writer" novalidate>
+      <label>
+        <span>TITLE</span>
+        <input id="f-title" name="title" type="text" placeholder="Your article title" required />
+      </label>
+
+      <div class="writer__row">
+        <label>
+          <span>DATE</span>
+          <input id="f-date" name="date" type="date" required />
+        </label>
+        <label>
+          <span>TAGS (comma separated)</span>
+          <input id="f-tags" name="tags" type="text" placeholder="React, CSS" />
+        </label>
+      </div>
+
+      <label>
+        <span>EXCERPT (homepage summary)</span>
+        <input id="f-excerpt" name="excerpt" type="text" placeholder="One short sentence shown on the homepage" />
+      </label>
+
+      <label>
+        <span>CONTENT (Markdown)</span>
+        <textarea id="f-content" name="content" rows="14" placeholder="## Heading&#10;&#10;Write your article here. Supports **bold**, *italic*, `code`, lists, and [links](https://example.com)." required></textarea>
+      </label>
+
+      <div class="writer__actions">
+        <button class="btn btn--primary" type="submit">SAVE LOCALLY</button>
+        <button class="btn btn--ghost" type="button" id="preview-btn">TOGGLE PREVIEW</button>
+      </div>
+      <p class="writer__note" id="writer-note" aria-live="polite"></p>
+    </form>
+
+    <div class="preview" id="preview" hidden>
+      <article class="article"></article>
+    </div>
+
+    <section class="admin-list">
+      <h2 class="section__title"><span class="section__index">—</span> YOUR LOCAL POSTS</h2>
+      <p class="admin-list__empty" id="list-empty">No local posts yet. Write one above.</p>
+      <div id="local-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2077 NOVA — ALL SIGNALS RESERVED</span>
+    <div class="footer-links">
+      <a href="index.html#top">GITHUB</a>
+      <a href="index.html#top">TWITTER</a>
+      <a href="index.html#top">RSS</a>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA // Creative Developer</title>
+  <meta name="description" content="A cyberpunk-themed creative developer portfolio and interactive tutorial site." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background layers -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--cyan" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--magenta" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <a class="logo" href="#top" data-text="NOVA//">NOVA//</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#guides">GUIDES</a>
+      <a href="#blog">BLOG</a>
+      <a href="admin.html">WRITE</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <a class="btn btn--ghost nav-cta" href="#contact">INITIALIZE</a>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero__kicker">// CREATIVE DEVELOPER — EST. 2077</p>
+      <h1 class="hero__title glitch" data-text="NOVA">NOVA</h1>
+      <p class="hero__subtitle">
+        I build <span class="accent accent--cyan">interactive web experiences</span> and
+        <span class="accent accent--magenta">explain the web</span> with tutorials that
+        actually make sense.
+      </p>
+
+      <div class="terminal" aria-label="Interactive terminal demo">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">nova@cyberspace: ~</span>
+        </div>
+        <div class="terminal__body">
+          <p><span class="prompt">➜</span> <span id="typed" class="typed"></span><span class="cursor">▊</span></p>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#guides">VIEW GUIDES</a>
+        <a class="btn btn--ghost" href="#blog">READ THE BLOG</a>
+      </div>
+    </section>
+
+    <!-- Guides -->
+    <section id="guides" class="section">
+      <h2 class="section__title"><span class="section__index">01</span> INTERACTIVE GUIDES</h2>
+      <p class="section__intro">Hands-on, animated explainers. Built in the browser, for the browser.</p>
+
+      <div class="card-grid">
+        <article class="card" style="--accent:#00fff7">
+          <div class="card__preview card__preview--grid">
+            <div class="cube"></div>
+          </div>
+          <div class="card__body">
+            <span class="tag">CSS</span>
+            <h3>Neon Grid Systems</h3>
+            <p>Master CSS Grid by building a glowing, responsive cyber-layout from scratch.</p>
+            <a class="card__link" href="#guides">LAUNCH GUIDE →</a>
+          </div>
+        </article>
+
+        <article class="card" style="--accent:#ff00e5">
+          <div class="card__preview card__preview--glitch">
+            <span class="card__glitch-text" data-text="GLITCH">GLITCH</span>
+          </div>
+          <div class="card__body">
+            <span class="tag">ANIMATION</span>
+            <h3>How Glitch Effects Work</h3>
+            <p>The clip-path, text-shadow, and keyframe trick behind every cyberpunk title.</p>
+            <a class="card__link" href="#guides">LAUNCH GUIDE →</a>
+          </div>
+        </article>
+
+        <article class="card" style="--accent:#f5ff00">
+          <div class="card__preview card__preview--holo">
+            <div class="holo"></div>
+          </div>
+          <div class="card__body">
+            <span class="tag">REACT</span>
+            <h3>Holographic UI in React</h3>
+            <p>Composable gradients, parallax, and reduced-motion-safe effects.</p>
+            <a class="card__link" href="#guides">LAUNCH GUIDE →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section">
+      <h2 class="section__title"><span class="section__index">02</span> LATEST TRANSMISSIONS</h2>
+      <p class="section__intro">Deep dives into front-end internals, without the fluff.</p>
+
+      <div class="post-list" id="posts-list"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--about">
+      <div class="about__panel">
+        <h2 class="section__title"><span class="section__index">03</span> WHO IS NOVA</h2>
+        <p>
+          I'm a front-end developer and educator obsessed with the part of the web most
+          people skim over: the rendering, the animation, the tiny details that make an
+          interface feel alive.
+        </p>
+        <p>
+          My tutorials pair visual demos with real explanations, so you don't just copy code —
+          you understand it.
+        </p>
+        <ul class="skills">
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>CSS / Motion</li>
+          <li>WebGL</li>
+          <li>Accessibility</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact / Newsletter -->
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title"><span class="section__index">04</span> STAY ONLINE</h2>
+      <p class="section__intro">Join the newsletter. No spam, just signal.</p>
+
+      <form class="newsletter" id="newsletter" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@cyberspace.dev" autocomplete="email" />
+        <button class="btn btn--primary" type="submit">SUBSCRIBE</button>
+      </form>
+      <p class="newsletter__note" id="newsletter-note" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2077 NOVA — ALL SIGNALS RESERVED</span>
+    <div class="footer-links">
+      <a href="#top">GITHUB</a>
+      <a href="#top">TWITTER</a>
+      <a href="#top">RSS</a>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
