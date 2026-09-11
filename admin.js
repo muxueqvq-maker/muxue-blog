@@ -99,9 +99,10 @@ function b64decode(str) {
 
 function extractPosts(text) {
   const prefix = "window.ALL_POSTS = ";
-  const t = String(text).trim();
-  if (!t.startsWith(prefix)) throw new Error("无法解析 posts-data.js 的结构");
-  return JSON.parse(t.slice(prefix.length).replace(/;\s*$/, ""));
+  const t = String(text).replace(/^\uFEFF/, "").trim();
+  const i = t.indexOf(prefix);
+  if (i === -1) throw new Error("无法解析 posts-data.js 的结构");
+  return JSON.parse(t.slice(i + prefix.length).replace(/;\s*$/, ""));
 }
 
 function serializePosts(arr) {
